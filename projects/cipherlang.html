@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="shoutcut icon" href="img/small-chi.png">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <title>Cipherlang</title>
+ </head>
+<body>
+ <h1>Cipherlang</h1>
+ <p>Cipherlang is a scripting language for applying transforms to text.</p>
+ <h3>Usage</h3>
+ <ul>
+  <li>cipherlang [-iinfile] [-ooutfile] -fmethodfile [-a(comma-delimited argument list)]</li>
+   Uses a local cipherlang script to transform. Arguments are required for some transforms. If -i is omitted, input is read from stdin, likewise with -o and stdout.
+  <li>cipherlang -h</li>
+   Displays usage information
+  <li>cipherlang -d -fmethodfile</li>
+   Compiles method, adds method file to dictionary.
+ </ul>
+
+ <h3>Language</h3>
+ <p>The cipherlang language is fairly simple. There exist five types of statements: var,
+  const, write, load, apply.
+  <ul>
+    <li>var identifier</li>
+    <li>const identifier value</li>
+    <li>write source to destination</li>
+    <li>load destination to source</li>
+    <li>apply transform&lt;argument list&gt; to variable</li>
+  </ul>
+  Additionally, there exist operations: an operation phrase replaces a source in a write or load statement.<br />
+  The syntax of an operation phrase is: variable $operation_name variable2. Operations can
+  be nested to an arbitrary depth.
+ </p>
+ <br /><h3>Dictionary</h3>
+ <p>Compiled method files can be stored in a global directory, located by default at ~/.ciplang/methods/</p>
+
+ <br /><h3>Compilation</h3>
+ <p>Before interpretation, cipherlang scripts are compiled to a bytecode format, known as a method.
+ This method can either be stored in the dictionary or immediately interpreted. A copy of the method is cached locally for future use.
+ </p>
+
+ <br /><h3>More Details</h3>
+ The repository can be found <a href="https://github.com/xavenna/cipherlang">here</a><br />
+
+ Cipherlang was created by xavenna. It isn't complete yet, but a functional subset of the
+ language has been implemented<br />
+
+</body>
+ <footer>
+  <a href='../index.html'><img src="../img/back.png" width="60" height="40" alt="Click here to return home" title="Click here to return home"></a>
+ </footer>
+</html>
+
