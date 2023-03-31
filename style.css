@@ -25,6 +25,24 @@ td {
     margin: 0px 50px 0px 0px;
     background: #dddddd;
 }
+
+.grave {
+  width: min-content;
+  background: #dddddd;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-radius: 6px;
+
+  padding: 15px;
+/*
+  overflow: hidden;
+  margin: auto;
+  */
+}
+
 .bline {
     border-bottom: 2px solid black;
 }
